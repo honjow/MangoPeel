@@ -746,38 +746,6 @@ paramList[ParamName.battery] = {
     },
     patchs: []
 };
-
-paramList[ParamName.battery_watt] = {
-  name: ParamName.battery_watt,
-  group: ParamGroup.BATT,
-  preCondition: [{
-    disable: [ParamName.fps_only, ParamName.no_display, ParamName.legacy_layout]
-  }, {
-    disable: [ParamName.fps_only, ParamName.no_display, ParamName.full]
-  }],
-  toggle: {
-    label: localizeStrEnum.BATTERY_WATT_LABEL,
-    description: localizeStrEnum.BATTERY_WATT_DESCRIPTION,
-    defaultEnable: [false, false, true, true, true],
-  },
-  patchs: []
-};
-
-paramList[ParamName.battery_time] = {
-  name: ParamName.battery_time,
-  group: ParamGroup.BATT,
-  preCondition: [{
-    disable: [ParamName.fps_only, ParamName.no_display, ParamName.legacy_layout]
-  }, {
-    disable: [ParamName.fps_only, ParamName.no_display, ParamName.full]
-  }],
-  toggle: {
-    label: localizeStrEnum.BATTERY_TIME_LABEL,
-    description: localizeStrEnum.BATTERY_TIME_DESCRIPTION,
-    defaultEnable: [false, false, false, true, true],
-  },
-  patchs: []
-};
   
 paramList[ParamName.battery_icon] = {
     name: ParamName.battery_icon,
@@ -796,7 +764,7 @@ paramList[ParamName.battery_icon] = {
     },
     patchs: []
 };
-/*
+
 paramList[ParamName.battery_watt] = {
   name: ParamName.battery_watt,
   group: ParamGroup.BATT,
@@ -832,7 +800,6 @@ paramList[ParamName.battery_time] = {
   },
   patchs: []
 };
-*/
   
 paramList[ParamName.fan] = {
     name: ParamName.fan,
