@@ -25,6 +25,8 @@ paramList[ParamName.legacy_layout]={
         {label:"VRAM",value:ParamName.vram},
         {label:"RAM",value:ParamName.ram},
         {label:"BATT",value:ParamName.battery},
+        {label:"BATT_WATT",value:ParamName.battery_watt},
+        {label:"BATT_TIME",value:ParamName.battery_time},
         {label:"FAN",value:ParamName.fan},
         {label:"FSR",value:ParamName.fsr},
         {label:"GAMESCOPE",value:ParamName.fps},
@@ -44,6 +46,8 @@ paramList[ParamName.legacy_layout]={
             ParamName.vram,
             ParamName.ram,
             ParamName.battery,
+            ParamName.battery_watt,
+            ParamName.battery_time,
             ParamName.fan,
             ParamName.fsr,
             ParamName.fps,
@@ -63,6 +67,8 @@ paramList[ParamName.legacy_layout]={
             ParamName.vram,
             ParamName.ram,
             ParamName.battery,
+            ParamName.battery_watt,
+            ParamName.battery_time,
             ParamName.fan,
             ParamName.fsr,
             ParamName.fps,
@@ -75,6 +81,8 @@ paramList[ParamName.legacy_layout]={
             ParamName.time,
             ParamName.version,
             ParamName.battery,
+            ParamName.battery_watt,
+            ParamName.battery_time,
             ParamName.gpu_stats,
             ParamName.cpu_stats,
             ParamName.core_load,
@@ -98,6 +106,8 @@ paramList[ParamName.legacy_layout]={
             ParamName.vram,
             ParamName.ram,
             ParamName.battery,
+            ParamName.battery_watt,
+            ParamName.battery_time,
             ParamName.fan,
             ParamName.fsr,
             ParamName.fps,
@@ -116,6 +126,8 @@ paramList[ParamName.legacy_layout]={
             ParamName.vram,
             ParamName.ram,
             ParamName.battery,
+            ParamName.battery_watt,
+            ParamName.battery_time,
             ParamName.fan,
             ParamName.fsr,
             ParamName.fps,
@@ -733,6 +745,38 @@ paramList[ParamName.battery] = {
       defaultEnable: [false, false, true, true, true],
     },
     patchs: []
+};
+
+paramList[ParamName.battery_watt] = {
+  name: ParamName.battery_watt,
+  group: ParamGroup.BATT,
+  preCondition: [{
+    disable: [ParamName.fps_only, ParamName.no_display, ParamName.legacy_layout]
+  }, {
+    disable: [ParamName.fps_only, ParamName.no_display, ParamName.full]
+  }],
+  toggle: {
+    label: localizeStrEnum.BATTERY_WATT_LABEL,
+    description: localizeStrEnum.BATTERY_WATT_DESCRIPTION,
+    defaultEnable: [false, false, true, true, true],
+  },
+  patchs: []
+};
+
+paramList[ParamName.battery_time] = {
+  name: ParamName.battery_time,
+  group: ParamGroup.BATT,
+  preCondition: [{
+    disable: [ParamName.fps_only, ParamName.no_display, ParamName.legacy_layout]
+  }, {
+    disable: [ParamName.fps_only, ParamName.no_display, ParamName.full]
+  }],
+  toggle: {
+    label: localizeStrEnum.BATTERY_TIME_LABEL,
+    description: localizeStrEnum.BATTERY_TIME_DESCRIPTION,
+    defaultEnable: [false, false, false, true, true],
+  },
+  patchs: []
 };
   
 paramList[ParamName.battery_icon] = {
