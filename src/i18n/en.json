@@ -94,5 +94,11 @@
     "BATTERY_WATT_LABEL" : "Battery Watt",
     "BATTERY_WATT_DESCRIPTION" : "Display current battery watt consumption",
     "BATTERY_TIME_LABEL" : "Battery Time",
-    "BATTERY_TIME_DESCRIPTION" : "Display current battery time remaining"
+    "BATTERY_TIME_DESCRIPTION" : "Display current battery time remaining",
+    "RESORT_SELECT_DESCRIPTION" : "Manual Sorting",
+    "RESORT_END_DESCRIPTION" : "End Sorting",
+    "RESORT_MOVEUP_DESCRIPTION" : "Move Up",
+    "RESORT_MOVEDOWN_DESCRIPTION" : "Move Down",
+    "DEBUG_LABEL":"App",
+    "DEBUG_DESCRIPTION":"Display App Debug Information"
 }

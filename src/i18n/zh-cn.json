@@ -94,5 +94,11 @@
     "BATTERY_WATT_LABEL" : "电池功率消耗",
     "BATTERY_WATT_DESCRIPTION" : "显示当前电池的功率消耗",
     "BATTERY_TIME_LABEL" : "电池剩余时间",
-    "BATTERY_TIME_DESCRIPTION" : "显示当前剩余电池时间"
+    "BATTERY_TIME_DESCRIPTION" : "显示当前剩余电池时间",
+    "RESORT_SELECT_DESCRIPTION" : "手动排序",
+    "RESORT_END_DESCRIPTION" : "结束排序",
+    "RESORT_MOVEUP_DESCRIPTION" : "向上移动",
+    "RESORT_MOVEDOWN_DESCRIPTION" : "向下移动",
+    "DEBUG_LABEL":"App",
+    "DEBUG_DESCRIPTION":"显示App调试信息"
 }
