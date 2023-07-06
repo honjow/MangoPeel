@@ -762,7 +762,7 @@ export const paramList:{ [paramName: string]: ParamData }={
       },
       patchs: []
   },
-  /*
+  
   [ParamName.battery_watt] : {
     name: ParamName.battery_watt,
     group: ParamGroup.BATT,
@@ -798,7 +798,7 @@ export const paramList:{ [paramName: string]: ParamData }={
     },
     patchs: []
   },
-  */
+  
     
   [ParamName.fan] : {
       name: ParamName.fan,
