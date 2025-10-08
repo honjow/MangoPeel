@@ -8,6 +8,7 @@ on:
     push:
         branches:
             - 'main'
+            - 'dev'
         tags:
             - 'v*.*.*'
 
@@ -42,7 +43,7 @@ jobs:
           pnpm run build
           temp_dir=$(mktemp -d)
           mkdir -p $temp_dir/MangoPeel
-          cp -r dist backend *.py *.json *.md *.js LICENSE $temp_dir/MangoPeel
+          cp -r dist *.py *.json *.md *.js LICENSE $temp_dir/MangoPeel
           tar -czvf MangoPeel.tar.gz -C $temp_dir MangoPeel
           zip -r MangoPeel.zip MangoPeel
           rm -rf MangoPeel
