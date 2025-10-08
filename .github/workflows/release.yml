@@ -41,17 +41,20 @@ jobs:
           pnpm update @decky/ui --latest
           pnpm update @decky/api --latest
           pnpm run build
-          temp_dir=$(mktemp -d)
-          mkdir -p $temp_dir/MangoPeel
-          cp -r dist *.py *.json *.md *.js LICENSE $temp_dir/MangoPeel
-          tar -czvf MangoPeel.tar.gz -C $temp_dir MangoPeel
+
+          mkdir -p MangoPeel
+          cp -r dist *.py *.json *.md *.js LICENSE MangoPeel
+          tar -czvf MangoPeel.tar.gz MangoPeel
+
+          # zip
           zip -r MangoPeel.zip MangoPeel
           rm -rf MangoPeel
       
       - name: show files
         run: |
           tar -tzvf MangoPeel.tar.gz
-      
+          unzip -l MangoPeel.zip
+          
       - name: Publish Artifacts
         uses: actions/upload-artifact@v4
         with:
