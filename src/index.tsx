@@ -108,7 +108,7 @@ const Content: FC<{}> = ({ }) => {
             width: "calc(100vw - 50px)",
             marginTop: "-12px",
             position: "absolute",
-            ontain: "layout style paint",
+            contain: "layout style paint",
           }}
         >
           <Tabs
